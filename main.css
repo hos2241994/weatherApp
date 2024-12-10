@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap");
+
+:root {
+  --mainWeatherAppColor: #1e202c;
+  --secondryWeatherAppColor: #323544;
+  --footerWeatherAppColor: #262a36;
+  --iconWeatherAppColor: #0597d8;
+  --mainWeatherTextColor: lightgray;
+  --weatherAppShadow: 3px 2px 40px 3px rgba(0, 0, 0, 1);
+  --weatherAppFont: "Titillium Web", sans-serif;
+}
+
+body {
+  font-family: var(--weatherAppFont);
+  font-weight: 400;
+}
+
+/********** Nav ****************/
+.navbar {
+  background-color: var(--mainWeatherAppColor);
+  box-shadow: var(--loginSystem-shadow);
+}
+
+.navbar-brand p {
+  font-size: 0.7rem;
+}
+
+.navbar-brand img {
+  width: 4rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler i {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+  transition: all 0.5s;
+  color: white;
+}
+
+.navbar-toggler:hover i {
+  border-color: var(--iconWeatherAppColor);
+  color: var(--iconWeatherAppColor);
+}
+
+.navbar-nav {
+  background-color: var(--footerWeatherAppColor);
+
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white;
+  transition: all 0.5s;
+}
+
+.navbar-nav .nav-item:not(:last-child) .nav-link {
+  border-bottom: 1px solid #81848d;
+  border-radius: 0;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--iconWeatherAppColor);
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    background-color: transparent;
+  }
+
+  .navbar-nav .nav-item:not(:last-child) .nav-link,
+  .navbar-nav .nav-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    border-color: var(--iconWeatherAppColor);
+  }
+}
+/********** Nav ****************/
+
+/********** Main ****************/
+main {
+  padding: 50px 0;
+  min-height: 50vh;
+  background-color: var(--mainWeatherAppColor);
+  background-image: url(./img/banner.png);
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.location .form-control {
+  background-color: var(--mainWeatherAppColor);
+  border: none;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.location .form-control::placeholder {
+  color: var(--mainWeatherTextColor);
+}
+
+.location button {
+  background-color: var(--iconWeatherAppColor);
+  color: white;
+}
+
+.location button.btn:hover {
+  color: white;
+  background-color: var(--iconWeatherAppColor);
+}
+
+.weatherCard {
+  background-color: var(--footerWeatherAppColor);
+  color: var(--mainWeatherTextColor);
+}
+
+.weatherCard .cardHeader {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+}
+
+.weatherCard:nth-child(2) {
+  background-color: var(--secondryWeatherAppColor);
+}
+
+.cardBody h3 img {
+  width: 4rem;
+}
+.cardBody h3 span {
+  font-size: 4rem;
+}
+
+.cardBody .weatherCondition {
+  color: var(--iconWeatherAppColor);
+}
+
+.errorCard {
+  background-color: var(--secondryWeatherAppColor);
+}
+
+/********** Main ****************/
+
+/********** Footer ****************/
+footer {
+  background-color: var(--footerWeatherAppColor);
+}
+
+footer .socialIcon i {
+  background-color: var(--mainWeatherAppColor);
+  color: var(--iconWeatherAppColor);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+footer .socialIcon i:hover {
+  background-color: var(--iconWeatherAppColor);
+  color: white;
+}
+
+.copyRight {
+  color: var(--mainWeatherTextColor);
+}
+/********** Footer ****************/
